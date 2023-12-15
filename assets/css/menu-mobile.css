@@ -1,0 +1,132 @@
+.js [data-menu="button"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 5.938rem;
+  right: 3%;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--cor-7);
+  border-radius: 10rem;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+}
+
+.js [data-menu="button"].active {
+  position: fixed;
+  z-index: 500;
+}
+
+.js [data-menu="button"]:hover {
+  border: 1px solid var(--cor-p0);
+}
+
+.js [data-menu="button"]::before {
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 30px;
+  box-shadow: 0px 5px var(--cor-0), 0px -5px var(--cor-0);
+  background: var(--cor-0);
+}
+
+.js [data-menu="button"]:hover::before {
+  box-shadow: 0px 5px var(--cor-p0), 0px -5px var(--cor-p0);
+  background: var(--cor-p0);
+  transition: .3s;
+}
+
+.js [data-menu="button"].active::before {
+  transform: rotate(90deg);
+}
+
+.js [data-menu="bg"] {
+  display: none;
+  animation: show-left .3s forwards;
+}
+
+.js [data-menu="bg"].active {
+  display: block;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, var(--cor-12) 400px, rgba(0,0,0,0.5) 100px);
+  z-index: 400;
+}
+
+.js [data-menu="list"].active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  padding: 7rem 0 0 5rem;
+  z-index: 300;
+}
+
+.js [data-menu="list"] > h1 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding-bottom: 3rem;
+  color: var(--cor-6);
+}
+
+.js [data-menu="list"] a {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  color: var(--cor-6);
+  width: fit-content;
+}
+
+.js [data-menu="list"] a:hover svg,
+.js [data-menu="list"] a:hover span {
+  color: var(--cor-0);
+  fill: var(--cor-p0);
+}
+
+.js [data-menu="list"] a span {
+  font-size: .9rem;
+}
+
+.js [data-menu="list"] .svgInicio svg,
+.js [data-menu="list"] .svgSobre svg,
+.js [data-menu="list"] .svgResumo svg,
+.js [data-menu="list"] .svgServicos svg,
+.js [data-menu="list"] .svgHabilidades svg,
+.js [data-menu="list"] .svgProjetos svg,
+.js [data-menu="list"] .svgContato svg {
+  width: 18px;
+  fill: var(--cor-6);
+}
+
+.js [data-menu="listSocial"] {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 16rem 15rem 0;
+}
+
+.js [data-menu="listSocial"] h1 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--cor-6);
+}
+
+.js [data-menu="listSocial"] ul {
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+}
+
+.js [data-menu="listSocial"] svg {
+  width: 12px;
+  fill: var(--cor-6);
+}
+
+.js [data-menu="listSocial"] svg:hover {
+  fill: var(--cor-p0);
+}
