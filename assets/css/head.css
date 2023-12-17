@@ -17,6 +17,7 @@
   border: 1px solid var(--cor-9);
   border-radius: 30px;
   transform: translate(-2%, -50%);
+  z-index: 200;
 }
 
 .boxL:before {
@@ -173,9 +174,8 @@
 
 @media(max-width: 1500px) {
   .boxL {
-    width: 350px;
     min-height: 650px;
-    padding: 0;
+    padding: 2rem 2rem;
   }
   .boxL-head {
     gap: 7rem;
@@ -212,6 +212,7 @@
   border: 1px solid var(--cor-9);
   border-radius: 50px;
   transform: translate(-3%, -50%);
+  z-index: 200;
 }
 
 .boxR a {

@@ -91,9 +91,9 @@
 
 .sobre > p {
   font-size: 1rem;
-  max-width: 730px;
+  max-width: 790px;
   line-height: 1.87;
-  color: var(--cor-7);
+  color: var(--cor-6);
 }
 
 .resumo-formacao {

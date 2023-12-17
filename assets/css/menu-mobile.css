@@ -11,15 +11,15 @@
   background: transparent;
   position: absolute;
   cursor: pointer;
-}
-
-.js [data-menu="button"].active {
-  position: fixed;
-  z-index: 500;
+  z-index: 400;
 }
 
 .js [data-menu="button"]:hover {
   border: 1px solid var(--cor-p0);
+}
+
+.js [data-menu="button"].active {
+  position: fixed;
 }
 
 .js [data-menu="button"]::before {
@@ -53,7 +53,7 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(to left, var(--cor-12) 400px, rgba(0,0,0,0.5) 100px);
-  z-index: 400;
+  z-index: 300;
 }
 
 .js [data-menu="list"].active {
@@ -64,7 +64,6 @@
   width: 400px;
   height: 100%;
   padding: 7rem 0 0 5rem;
-  z-index: 300;
 }
 
 .js [data-menu="list"] > h1 {
