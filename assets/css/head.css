@@ -6,17 +6,13 @@
 .boxL {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   top: 50%;
-  left: 2%;
-  max-width: 400px;
-  min-height: 700px;
+  left: 4%;
   padding: 3rem;
   border: 1px solid var(--cor-9);
   border-radius: 30px;
-  transform: translate(-2%, -50%);
+  transform: translate(-4%, -50%);
   z-index: 200;
 }
 
@@ -35,7 +31,7 @@
 
 .boxL-head {
   display: flex;
-  gap: 9rem;
+  justify-content: space-between;
   padding-bottom: 1.5rem;
 }
 
@@ -44,26 +40,11 @@
   line-height: 1.7;
 }
 
-.boxL-head h1::before {
-  content: 'w';
+.boxL-head h1 svg {
+  top: 0px;
+  right: -20px;
+  width: 15px;
   position: absolute;
-  font-size: .710rem;
-  font-weight: 300;
-  width: .625rem;
-  height: .688rem;
-  top: 0.155rem;
-  right: -1.390rem;
-}
-
-.boxL-head h1::after {
-  content: '';
-  position: absolute;
-  top: 0.155rem;
-  right: -1.595rem;
-  width: 1rem;
-  height: 1rem;
-  border: 1px solid var(--cor-1);
-  border-radius: 10rem;
 }
 
 .boxL-head h2 {
@@ -81,7 +62,7 @@
 }
 
 .boxL-foto img {
-  width: 302px;
+  width: 300px;
   height: 280px;
   border-radius: 30px;
 }
@@ -147,8 +128,8 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  width: max-content;
-  padding: .625rem 5rem;
+  padding: .625rem 0rem;
+  width: 100%;
   gap: .625rem;
   border: 2px solid var(--cor-p1);
   border-radius: 5rem;
@@ -170,35 +151,6 @@
 .boxL .botao svg {
   width: 22px;
   fill: var(--cor-p5);
-}
-
-@media(max-width: 1500px) {
-  .boxL {
-    min-height: 650px;
-    padding: 2rem 2rem;
-  }
-  .boxL-head {
-    gap: 7rem;
-  }
-  .boxL-foto img {
-    width: 275px;
-    height: 250px;
-  }
-  .boxL-info h3 {
-    font-size: 1rem;
-  }
-  
-  .boxL-info p {
-    font-size: .775rem;
-  }
-  .botao {
-    width: fit-content;
-    padding: .3rem 4.4rem;
-    font-size: .875rem;
-  }
-  .botao svg {
-    width: 20px;
-  }
 }
 
 .boxR {
@@ -286,4 +238,47 @@
   border-left: 15px solid var(--cor-8);
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
+}
+
+@media(max-width: 1500px) {
+  .boxL {
+    padding: 2rem;
+  }
+  .boxL-head {
+    gap: 7rem;
+  }
+  .boxL-info h3 {
+    font-size: 1rem;
+  }
+  
+  .boxL-info p {
+    font-size: .775rem;
+  }
+  .botao {
+    width: fit-content;
+    padding: .3rem 4.4rem;
+    font-size: .938rem;
+  }
+  .botao svg {
+    width: 20px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .boxL {
+    position: static;
+    transform: none;
+    max-width: 700px;
+    height: 700px;
+    margin: 50px auto;
+  }
+  .boxL:before {
+    display: none;
+  }
+  .boxL-head h1 {
+    justify-content: space-between;
+  }
+  .boxR {
+    display: none;
+  }
 }

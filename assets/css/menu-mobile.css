@@ -8,7 +8,7 @@
   height: 60px;
   border: 1px solid var(--cor-7);
   border-radius: 10rem;
-  background: transparent;
+  background: var(--cor-10);
   position: absolute;
   cursor: pointer;
   z-index: 400;
@@ -16,10 +16,6 @@
 
 .js [data-menu="button"]:hover {
   border: 1px solid var(--cor-p0);
-}
-
-.js [data-menu="button"].active {
-  position: fixed;
 }
 
 .js [data-menu="button"]::before {
@@ -37,6 +33,12 @@
   transition: .3s;
 }
 
+.js [data-menu="button"].active {
+  position: fixed;
+  background: transparent;
+  top: 5.938rem;
+}
+
 .js [data-menu="button"].active::before {
   transform: rotate(90deg);
 }
@@ -49,6 +51,7 @@
 .js [data-menu="bg"].active {
   display: block;
   position: fixed;
+  top: 0px;
   right: 0;
   width: 100%;
   height: 100%;
@@ -128,4 +131,10 @@
 
 .js [data-menu="listSocial"] svg:hover {
   fill: var(--cor-p0);
+}
+
+@media(max-width: 1200px) {
+  .js [data-menu="button"] {
+    top: 9rem;
+  }
 }
