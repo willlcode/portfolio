@@ -28,7 +28,7 @@
 }
 
 .inicio-head {
-  margin-bottom: 12rem;
+  margin-bottom: 9rem;
 }
 
 .inicio-head h1 {
@@ -160,8 +160,9 @@
 .projetos-ping-pong img {
   width: 700px;
   height: 400px;
+  object-fit: cover;
   border-radius: 1.875rem;
-  box-shadow: -1px 1px 15px rgba(0, 0, 0, 1);
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 1);
   margin-bottom: 1rem;
 }
 
@@ -248,4 +249,54 @@
   border: 2px solid var(--cor-p0);
   background: transparent;
   color: var(--cor-p0);
+}
+
+@media(max-width: 1200px) {
+  .inicio,
+  .sobre,
+  .resumo,
+  .projetos,
+  .contato {
+    padding: 3rem 1.3rem 3rem 1.3rem;
+  }
+  .intro-botao {
+    margin-bottom: 3rem;
+  }
+}
+
+@media(max-width: 900px) {
+  .inicio-head {
+    margin-bottom: 5rem;
+  }
+  .inicio-head h1 {
+    font-size: 4rem;
+  }
+}
+@media(max-width: 600px) {
+  .inicio-head {
+    margin-bottom: 3rem;
+  }
+  .inicio-head h1 {
+    font-size: 3rem;
+  }
+  .sobre h2,
+  .resumo h2,
+  .projetos h2,
+  .contato h2 {
+    font-size: 2.8rem;
+  }
+  .projetos-animais img,
+  .projetos-ping-pong img {
+    width: 600px;
+    height: 320px;
+  }
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+  .formulario input{
+    width: 200px;
+  }
+  .formulario div:nth-child(4) {
+    grid-column: 1;
+  }
 }
